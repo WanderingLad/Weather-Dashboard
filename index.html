@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="A dashboard to check the weather in the world." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header class="bg-primary text-center mb-3">
+    <h2 class="h1 py-3 text-dark">Weather Dashboard</h2>
+  </header>
+
+  <main>
+    <section class="col-4">
+      <form id="search-form">
+        <label for="search-field" class="h2">Search For A City:</label><br>
+        <input id="search-field" type="search" name="search-field" class="form-control rounded" placeholder="Enter City"/>
+      </form>
+      <button id="search-button" type="submit" class="btn btn-outline-primary mt-3" form="search-form">Search</button>
+      <button id="reset-button" type="button" class="btn btn-outline-primary mt-3">Reset Search</button>
+      <hr>
+      <div>
+        <ul id="localList" class="overflow-auto">
+
+        </ul>
+      </div>
+    </section>
+    <section class="col-2">
+      <div>
+        <ul id="localList" class="overflow-auto">
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary text-center mt-3">
+    <h2 class="h1 py-3">
+      <a class="text-dark" href="https://github.com/WanderingLad" target="_blank">Made by James Reilly</a>
+    </h2>
+  </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./Assets/JS/script.js"></script>
+
+</html>
