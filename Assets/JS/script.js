@@ -10,7 +10,7 @@ var formList = document.querySelector("#localList");
 
 var APIID = "Weather Dashboard";
 
-var API = "3edcfa6c11db04ad96a6eaf0dac6ed19"
+var API
 
 var city;
 
