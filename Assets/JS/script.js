@@ -12,7 +12,7 @@ var clickable;
 
 var APIID = "Weather Dashboard";
 
-var API
+var API = "3edcfa6c11db04ad96a6eaf0dac6ed19";
 
 var city;
 
@@ -94,6 +94,8 @@ searchForm.addEventListener('submit', function(event)
         {
             console.log(data);
 
+            $("#main-icon").attr('src',`http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`);
+
             $("#main-temperature").text("Temp: " + data.current.temp + "° F");
 
             $("#main-wind-speed").text("Wind: " + data.current.wind_speed + " MPH");
@@ -126,6 +128,36 @@ searchForm.addEventListener('submit', function(event)
             {
                 $("#uv-index").css("background-color","purple");
             }
+
+            $("#card-one-icon").attr('src',`http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@2x.png`);
+            $("#card-one-date").text(moment().add(1, 'day').format("M/DD/YYYY"));
+            $("#card-one-temperature").text("Temp: " + data.daily[0].temp.day + "° F");
+            $("#card-one-wind-speed").text("Wind: " + data.daily[0].wind_speed + " MPH");
+            $("#card-one-humidity").text("Humidity: " + data.daily[0].humidity + "%");
+
+            $("#card-two-icon").attr('src',`http://openweathermap.org/img/wn/${data.daily[1].weather[0].icon}@2x.png`);
+            $("#card-two-date").text(moment().add(2, 'day').format("M/DD/YYYY"));
+            $("#card-two-temperature").text("Temp: " + data.daily[1].temp.day + "° F");
+            $("#card-two-wind-speed").text("Wind: " + data.daily[1].wind_speed + " MPH");
+            $("#card-two-humidity").text("Humidity: " + data.daily[1].humidity + "%");
+
+            $("#card-three-icon").attr('src',`http://openweathermap.org/img/wn/${data.daily[2].weather[0].icon}@2x.png`);
+            $("#card-three-date").text(moment().add(3, 'day').format("M/DD/YYYY"));
+            $("#card-three-temperature").text("Temp: " + data.daily[2].temp.day + "° F");
+            $("#card-three-wind-speed").text("Wind: " + data.daily[2].wind_speed + " MPH");
+            $("#card-three-humidity").text("Humidity: " + data.daily[2].humidity + "%");
+
+            $("#card-four-icon").attr('src',`http://openweathermap.org/img/wn/${data.daily[3].weather[0].icon}@2x.png`);
+            $("#card-four-date").text(moment().add(4, 'day').format("M/DD/YYYY"));
+            $("#card-four-temperature").text("Temp: " + data.daily[3].temp.day + "° F");
+            $("#card-four-wind-speed").text("Wind: " + data.daily[3].wind_speed + " MPH");
+            $("#card-four-humidity").text("Humidity: " + data.daily[3].humidity + "%");
+
+            $("#card-five-icon").attr('src',`http://openweathermap.org/img/wn/${data.daily[4].weather[0].icon}@2x.png`);
+            $("#card-five-date").text(moment().add(5, 'day').format("M/DD/YYYY"));
+            $("#card-five-temperature").text("Temp: " + data.daily[4].temp.day + "° F");
+            $("#card-five-wind-speed").text("Wind: " + data.daily[4].wind_speed + " MPH");
+            $("#card-five-humidity").text("Humidity: " + data.daily[4].humidity + "%");
         })
         
     });
