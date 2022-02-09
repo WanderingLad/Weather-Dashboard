@@ -10,9 +10,9 @@ var formList = document.querySelector("#localList");
 
 var clickable;
 
-var APIID = "Weather Dashboard";
+var APIID = config.APIID;
 
-var API = "3edcfa6c11db04ad96a6eaf0dac6ed19";
+var API = config.API;
 
 var city;
 
