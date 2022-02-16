@@ -8,11 +8,9 @@ var searchField = document.querySelector("#search-field");
 
 var formList = document.querySelector("#localList");
 
-var clickable;
+var APIID = 'Weather Dashboard';
 
-var APIID = 'edcfa6c11db04ad96a6eaf0dac6ed19';
-
-var API = 'edcfa6c11db04ad96a6eaf0dac6ed19';
+var API = '3edcfa6c11db04ad96a6eaf0dac6ed19';
 
 var city;
 
@@ -29,8 +27,6 @@ $(document).ready(function()
         for(const el of appendCity)
         {
             var button = document.createElement('button');
-
-            clickable
 
             button.textContent = el;
 
@@ -162,19 +158,23 @@ searchForm.addEventListener('submit', function(event)
         
     });
 
-    var button = document.createElement('button');
+    if(!cityList.includes(city))
+    {
+        var button = document.createElement('button');
 
-    button.textContent = city;
+        button.textContent = city;
 
-    var item = document.createElement('li');
+        var item = document.createElement('li');
 
-    item.appendChild(button);
+        item.appendChild(button);
 
-    formList.insertBefore(item, formList.firstChild);
+        formList.insertBefore(item, formList.firstChild);
 
-    cityList.push(city);
+        cityList.push(city);
 
-    localStorage.setItem('cities', JSON.stringify(cityList));
+        localStorage.setItem('cities', JSON.stringify(cityList));
+    }
+    
 }
 )
 
