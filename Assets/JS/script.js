@@ -10,9 +10,9 @@ var formList = document.querySelector("#localList");
 
 var clickable;
 
-var APIID = config.APIID;
+var APIID = 'edcfa6c11db04ad96a6eaf0dac6ed19';
 
-var API = config.API;
+var API = 'edcfa6c11db04ad96a6eaf0dac6ed19';
 
 var city;
 
